@@ -2,4 +2,4 @@
 
 NAME="Hello DevOps"
 
-echo $NAME
+echo "$NAME"
