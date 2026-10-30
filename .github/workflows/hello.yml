@@ -12,5 +12,11 @@ jobs:
       - name: Check Bash syntax
         run: bash -n hello.sh
 
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck
+        run: shellcheck hello.sh
+
       - name: Run Bash script
         run: bash hello.sh
