@@ -1,13 +1,16 @@
-name: My First CI
+name: Bash CI
 
 on: push
 
 jobs:
-  hello:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Download repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Check Bash syntax
+        run: bash -n hello.sh
 
       - name: Run Bash script
         run: bash hello.sh
